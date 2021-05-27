@@ -30,21 +30,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 void process_indicator_update(layer_state_t state, uint8_t usb_led) {
 
-
-
-
+  /*Indicator 2 on for active Layer 1 */
   if (layer_state_cmp (state, 1)) {
       writePinHigh(B5);
 }
-
+  /*Indicator 3 on for active Layer 2 */
   else if (state & (1<<2)) {
       writePinHigh(B4);
       writePinLow(B5);
 }
+  /*Indicators 2 & 3 on for active Layer 3 */
   else if (state & (1<<3)){
       writePinHigh(B4);
       writePinHigh(B5);
   }
+  /*Indicators 2 & 3 off when on Layer 0 */
   else {
       writePinLow(B4);
       writePinLow(B5);
