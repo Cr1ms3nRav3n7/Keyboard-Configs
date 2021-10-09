@@ -13,10 +13,3 @@ Vial-firmware hosts the files to compile vial firmware for various keyboards.
 * Oceanographer
 * Fourier (vial.json to sideload via firmware)
 
-## Planned Keyboards for Vial
-
-* Minisub
-* Taco Truck
-* Phoenix
-* Delilah
-* Bepovan
